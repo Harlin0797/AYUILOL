@@ -1,0 +1,73 @@
+﻿<Game>
+  <Account value="875556003"/>
+  <GameArea value="巨神峰 电信"/>
+  <PuTong value="0"/>
+  <CuiCan value="1000"/>
+  <shenmi>
+    <item gid="6ABCB541-9C52-4B8A-AD94-F06B91FB3F0E" id="67004"  cexpire="" cplace="巨神峰 电信" cstatus="1"  ctime="2017-1-11 9:20:02"></item>
+    <item gid="67D21265-2C33-43F3-AA95-1E0A7841F8E5" id="5005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 10:10:04"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB1" id="64007"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 11:10:02"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB2" id="122003"  cexpire="" cplace="" cstatus="0" ctime="2017-1-11 12:10:02"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB3" id="91003"  cexpire="" cplace="" cstatus="0" ctime="2017-1-9 22:11:11"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB4" id="67010"  cexpire="7天" cplace="" cstatus="0" ctime="2017-1-12 14:10:42"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB5" id="117005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 18:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB6" id="40005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB7" id="62003"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 20:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB8" id="1008"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 18:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13CB9" id="96005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C10" id="102005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C11" id="131002"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C12" id="64003"  cexpire="" cplace="" cstatus="0" ctime="2017-1-11 19:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C13" id="12005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 11:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C14" id="12001"  cexpire="" cplace="" cstatus="0" ctime="2017-1-9 11:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C15" id="37004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-9 11:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C16" id="92006"  cexpire="" cplace="" cstatus="0" ctime="2017-1-8 11:10:24"></item>
+    <item gid="B04225D2-11AD-4C16-BC51-035132A13C17" id="92005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+
+  </shenmi>
+  <putong>
+    <item gid="B04225D2-1234-4C16-BC51-035132A13CB6" id="245"  cexpire="7天" cplace="" cstatus="0"  ctime="2017-1-11 9:20:02"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035132A11CB6"  id="1007"  cexpire="7天" cplace="" cstatus="0" ctime="2017-1-10 10:10:04"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035132A12CB6"  id="3002"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 11:10:02"></item>
+    <item  gid="B04225D2-1234-4C16-BC51-035132A14CB6" id="238"  cexpire="" cplace="" cstatus="0" ctime="2017-1-11 12:10:02"></item>
+    <item gid="B04215D2-1234-4C16-BC51-035132A15CB6"  id="429"  cexpire="7天" cplace="" cstatus="0" ctime="2017-1-9 22:11:11"></item>
+    <item gid="B04265D2-1234-4C16-BC51-035232A13CB6"  id="254"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 18:10:24"></item>
+    <item gid="B04325D2-1234-4C16-BC51-035332A13CB6"  id="4004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04025D2-1234-4C16-BC51-035432A13CB6"  id="1001"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 20:10:24"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035632A13CB6"  id="1008"  cexpire="7天" cplace="" cstatus="0" ctime="2017-1-12 18:10:24"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035732A13CB6"  id="9002"  cexpire="7天" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035832A13CB6"  id="11001"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035932A13CB6"  id="14001"  cexpire="" cplace="" cstatus="0" ctime="2017-1-12 19:10:24"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035A32A13CB6"  id="104"  cexpire="" cplace="" cstatus="0" ctime="2017-1-11 19:10:24"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035B32A13CB6"  id="117"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 11:10:24"></item>
+    <item gid="B04225D2-1234-4C16-BC51-035C32A13CB6"  id="10001"  cexpire="" cplace="" cstatus="0" ctime="2017-1-9 11:10:24"></item>
+  </putong>
+
+  <CuiCan>
+    <item  gid="B04225D2-1214-4C16-BC51-035132A13CB6" id="92006"  cexpire="" cplace="" cstatus="0" ctime="2017-1-8 11:10:24"></item>
+    <item  gid="B04225D2-2234-4C16-BC51-035132A13CB6" id="268003"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-3234-4C16-BC51-035132A13CB6" id="238002"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-A234-4C16-BC51-035132A13CB6" id="79008"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-B234-4C16-BC51-035132A13CB6" id="64006"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-C234-4C16-BC51-035132A13CB6" id="57004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-12A4-4C16-BC51-035132A13CB6" id="56004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-12B4-4C16-BC51-035132A13CB6" id="55008"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-12C4-4C16-BC51-035132A13CB6" id="53011"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-123A-4C16-BC51-035132A13CB6" id="45007"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-123B-4C16-BC51-035132A13CB6" id="43004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04225D2-123C-4C16-BC51-035132A13CB6" id="38005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04235D2-1014-4C16-BC51-035132A13CB6" id="37004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04245D2-1234-4C16-BC51-035132A13CB6" id="36008"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04255D2-1234-4C16-BC51-035132A13CB6" id="32004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04265D2-1234-4C16-BC51-035132A13CB6" id="51010"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04275D2-1234-4C16-BC51-035132A13CB6" id="51006"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04285D2-1234-4C16-BC51-035132A13CB6" id="8005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04295D2-1234-4C16-BC51-035132A13CB6" id="7005"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04205D2-1234-4C16-BC51-035132A13CB6" id="4002"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04115D2-1234-4C16-BC51-035132A13CB6" id="4007"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04165D2-1234-4C16-BC51-035132A13CB6" id="2004"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+    <item  gid="B04195D2-1234-4C16-BC51-035132A13CB6" id="1003"  cexpire="" cplace="" cstatus="0" ctime="2017-1-10 13:10:24"></item>
+  </CuiCan>
+
+
+</Game>

@@ -1,0 +1,1681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65AC38BD-11AD-412B-9208-B3C962B428ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LOLSkinGetter</RootNamespace>
+    <AssemblyName>LOLSkinGetter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Image 10_1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ay.Framework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bb01a39f4f86242f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Ay.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ay.Framework.WPF, Version=5.1.0.0, Culture=neutral, PublicKeyToken=bb01a39f4f86242f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Ay.Framework.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Expression.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ShaderEffectLibrary">
+      <HintPath>lib\ShaderEffectLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ViewStartController.cs" />
+    <Compile Include="Controls\MessageDialog.xaml.cs">
+      <DependentUpon>MessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkinGetterChou.xaml.cs">
+      <DependentUpon>SkinGetterChou.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkinGetterDisplay.xaml.cs">
+      <DependentUpon>SkinGetterDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AyEffects.cs" />
+    <Compile Include="Controls\SkinGetterModel.cs" />
+    <Compile Include="Controls\SkinGetterViewBox.xaml.cs">
+      <DependentUpon>SkinGetterViewBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkinGetterViewBox3.xaml.cs">
+      <DependentUpon>SkinGetterViewBox3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkinGetterViewBox2.xaml.cs">
+      <DependentUpon>SkinGetterViewBox2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkinGetterXuanChuan.xaml.cs">
+      <DependentUpon>SkinGetterXuanChuan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ConfigMgr\ConfigManagerFactory.cs" />
+    <Compile Include="DAL\ConfigMgr\IAyConfigManager.cs" />
+    <Compile Include="DAL\ConfigMgr\GameConfigFile.cs" />
+    <Compile Include="DAL\FileHelper.cs" />
+    <Compile Include="DAL\Models\LOLIDTitles.cs" />
+    <Compile Include="Models\TestMessageModel.cs" />
+    <Compile Include="Models\ViewStartModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Startup.cs" />
+    <Page Include="Contents\Styles\AYUIProjectDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MessageDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SkinGetterChou.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SkinGetterDisplay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SkinGetterViewBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SkinGetterViewBox3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SkinGetterViewBox2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SkinGetterXuanChuan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Home\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\_ViewStart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Global.asax.cs" />
+    <Compile Include="Views\Home\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_ViewStart.xaml.cs">
+      <DependentUpon>_ViewStart.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Contents\appgames\1000.jpg" />
+    <None Include="Contents\appgames\10000.jpg" />
+    <None Include="Contents\appgames\10002.jpg" />
+    <None Include="Contents\appgames\10005.jpg" />
+    <None Include="Contents\appgames\10006.jpg" />
+    <None Include="Contents\appgames\10008.jpg" />
+    <None Include="Contents\appgames\1001.jpg" />
+    <None Include="Contents\appgames\1002.jpg" />
+    <None Include="Contents\appgames\1003.jpg" />
+    <None Include="Contents\appgames\1004.jpg" />
+    <None Include="Contents\appgames\1005.jpg" />
+    <None Include="Contents\appgames\1006.jpg" />
+    <None Include="Contents\appgames\1007.jpg" />
+    <None Include="Contents\appgames\1008.jpg" />
+    <None Include="Contents\appgames\1009.jpg" />
+    <None Include="Contents\appgames\101000.jpg" />
+    <None Include="Contents\appgames\101002.jpg" />
+    <None Include="Contents\appgames\101004.jpg" />
+    <None Include="Contents\appgames\102000.jpg" />
+    <None Include="Contents\appgames\102001.jpg" />
+    <None Include="Contents\appgames\102003.jpg" />
+    <None Include="Contents\appgames\102005.jpg" />
+    <None Include="Contents\appgames\102006.jpg" />
+    <None Include="Contents\appgames\103000.jpg" />
+    <None Include="Contents\appgames\103003.jpg" />
+    <None Include="Contents\appgames\103004.jpg" />
+    <None Include="Contents\appgames\103005.jpg" />
+    <None Include="Contents\appgames\103006.jpg" />
+    <None Include="Contents\appgames\104000.jpg" />
+    <None Include="Contents\appgames\104002.jpg" />
+    <None Include="Contents\appgames\104003.jpg" />
+    <None Include="Contents\appgames\104004.jpg" />
+    <None Include="Contents\appgames\104005.jpg" />
+    <None Include="Contents\appgames\104006.jpg" />
+    <None Include="Contents\appgames\105000.jpg" />
+    <None Include="Contents\appgames\105002.jpg" />
+    <None Include="Contents\appgames\105003.jpg" />
+    <None Include="Contents\appgames\105004.jpg" />
+    <None Include="Contents\appgames\105008.jpg" />
+    <None Include="Contents\appgames\105009.jpg" />
+    <None Include="Contents\appgames\106000.jpg" />
+    <None Include="Contents\appgames\106001.jpg" />
+    <None Include="Contents\appgames\106002.jpg" />
+    <None Include="Contents\appgames\107000.jpg" />
+    <None Include="Contents\appgames\107002.jpg" />
+    <None Include="Contents\appgames\107003.jpg" />
+    <None Include="Contents\appgames\11000.jpg" />
+    <None Include="Contents\appgames\110000.jpg" />
+    <None Include="Contents\appgames\110001.jpg" />
+    <None Include="Contents\appgames\110002.jpg" />
+    <None Include="Contents\appgames\110003.jpg" />
+    <None Include="Contents\appgames\110004.jpg" />
+    <None Include="Contents\appgames\110005.jpg" />
+    <None Include="Contents\appgames\11001.jpg" />
+    <None Include="Contents\appgames\11002.jpg" />
+    <None Include="Contents\appgames\11003.jpg" />
+    <None Include="Contents\appgames\11005.jpg" />
+    <None Include="Contents\appgames\11009.jpg" />
+    <None Include="Contents\appgames\111000.jpg" />
+    <None Include="Contents\appgames\111001.jpg" />
+    <None Include="Contents\appgames\111004.jpg" />
+    <None Include="Contents\appgames\112000.jpg" />
+    <None Include="Contents\appgames\112001.jpg" />
+    <None Include="Contents\appgames\112003.jpg" />
+    <None Include="Contents\appgames\113000.jpg" />
+    <None Include="Contents\appgames\113001.jpg" />
+    <None Include="Contents\appgames\113002.jpg" />
+    <None Include="Contents\appgames\113005.jpg" />
+    <None Include="Contents\appgames\114000.jpg" />
+    <None Include="Contents\appgames\114001.jpg" />
+    <None Include="Contents\appgames\114003.jpg" />
+    <None Include="Contents\appgames\114004.jpg" />
+    <None Include="Contents\appgames\115000.jpg" />
+    <None Include="Contents\appgames\115001.jpg" />
+    <None Include="Contents\appgames\115002.jpg" />
+    <None Include="Contents\appgames\115003.jpg" />
+    <None Include="Contents\appgames\115004.jpg" />
+    <None Include="Contents\appgames\115005.jpg" />
+    <None Include="Contents\appgames\117000.jpg" />
+    <None Include="Contents\appgames\117001.jpg" />
+    <None Include="Contents\appgames\117003.jpg" />
+    <None Include="Contents\appgames\117005.jpg" />
+    <None Include="Contents\appgames\119000.jpg" />
+    <None Include="Contents\appgames\119002.jpg" />
+    <None Include="Contents\appgames\119003.jpg" />
+    <None Include="Contents\appgames\119004.jpg" />
+    <None Include="Contents\appgames\119006.jpg" />
+    <None Include="Contents\appgames\12000.jpg" />
+    <None Include="Contents\appgames\120000.jpg" />
+    <None Include="Contents\appgames\120001.jpg" />
+    <None Include="Contents\appgames\120002.jpg" />
+    <None Include="Contents\appgames\120003.jpg" />
+    <None Include="Contents\appgames\120004.jpg" />
+    <None Include="Contents\appgames\120005.jpg" />
+    <None Include="Contents\appgames\12001.jpg" />
+    <None Include="Contents\appgames\12004.jpg" />
+    <None Include="Contents\appgames\12005.jpg" />
+    <None Include="Contents\appgames\12007.jpg" />
+    <None Include="Contents\appgames\12008.jpg" />
+    <None Include="Contents\appgames\12009.jpg" />
+    <None Include="Contents\appgames\121000.jpg" />
+    <None Include="Contents\appgames\121001.jpg" />
+    <None Include="Contents\appgames\121002.jpg" />
+    <None Include="Contents\appgames\121003.jpg" />
+    <None Include="Contents\appgames\122000.jpg" />
+    <None Include="Contents\appgames\122001.jpg" />
+    <None Include="Contents\appgames\122002.jpg" />
+    <None Include="Contents\appgames\122003.jpg" />
+    <None Include="Contents\appgames\122004.jpg" />
+    <None Include="Contents\appgames\122008.jpg" />
+    <None Include="Contents\appgames\126000.jpg" />
+    <None Include="Contents\appgames\126002.jpg" />
+    <None Include="Contents\appgames\126003.jpg" />
+    <None Include="Contents\appgames\127000.jpg" />
+    <None Include="Contents\appgames\127001.jpg" />
+    <None Include="Contents\appgames\127002.jpg" />
+    <None Include="Contents\appgames\127003.jpg" />
+    <None Include="Contents\appgames\13000.jpg" />
+    <None Include="Contents\appgames\13002.jpg" />
+    <None Include="Contents\appgames\13003.jpg" />
+    <None Include="Contents\appgames\13005.jpg" />
+    <None Include="Contents\appgames\13007.jpg" />
+    <None Include="Contents\appgames\13008.jpg" />
+    <None Include="Contents\appgames\13009.jpg" />
+    <None Include="Contents\appgames\131000.jpg" />
+    <None Include="Contents\appgames\131001.jpg" />
+    <None Include="Contents\appgames\131002.jpg" />
+    <None Include="Contents\appgames\131003.jpg" />
+    <None Include="Contents\appgames\133000.jpg" />
+    <None Include="Contents\appgames\133001.jpg" />
+    <None Include="Contents\appgames\133002.jpg" />
+    <None Include="Contents\appgames\133003.jpg" />
+    <None Include="Contents\appgames\134000.jpg" />
+    <None Include="Contents\appgames\134001.jpg" />
+    <None Include="Contents\appgames\134002.jpg" />
+    <None Include="Contents\appgames\134003.jpg" />
+    <None Include="Contents\appgames\134004.jpg" />
+    <None Include="Contents\appgames\136000.jpg" />
+    <None Include="Contents\appgames\136001.jpg" />
+    <None Include="Contents\appgames\14000.jpg" />
+    <None Include="Contents\appgames\14003.jpg" />
+    <None Include="Contents\appgames\14004.jpg" />
+    <None Include="Contents\appgames\14005.jpg" />
+    <None Include="Contents\appgames\143000.jpg" />
+    <None Include="Contents\appgames\143001.jpg" />
+    <None Include="Contents\appgames\143002.jpg" />
+    <None Include="Contents\appgames\143003.jpg" />
+    <None Include="Contents\appgames\15000.jpg" />
+    <None Include="Contents\appgames\150000.jpg" />
+    <None Include="Contents\appgames\150001.jpg" />
+    <None Include="Contents\appgames\150002.jpg" />
+    <None Include="Contents\appgames\150003.jpg" />
+    <None Include="Contents\appgames\15001.jpg" />
+    <None Include="Contents\appgames\15003.jpg" />
+    <None Include="Contents\appgames\15005.jpg" />
+    <None Include="Contents\appgames\15007.jpg" />
+    <None Include="Contents\appgames\154000.jpg" />
+    <None Include="Contents\appgames\154001.jpg" />
+    <None Include="Contents\appgames\154002.jpg" />
+    <None Include="Contents\appgames\157000.jpg" />
+    <None Include="Contents\appgames\157001.jpg" />
+    <None Include="Contents\appgames\157002.jpg" />
+    <None Include="Contents\appgames\157003.jpg" />
+    <None Include="Contents\appgames\16000.jpg" />
+    <None Include="Contents\appgames\16001.jpg" />
+    <None Include="Contents\appgames\16002.jpg" />
+    <None Include="Contents\appgames\16003.jpg" />
+    <None Include="Contents\appgames\16004.jpg" />
+    <None Include="Contents\appgames\16005.jpg" />
+    <None Include="Contents\appgames\16006.jpg" />
+    <None Include="Contents\appgames\161000.jpg" />
+    <None Include="Contents\appgames\161001.jpg" />
+    <None Include="Contents\appgames\161002.jpg" />
+    <None Include="Contents\appgames\161003.jpg" />
+    <None Include="Contents\appgames\163000.jpg" />
+    <None Include="Contents\appgames\163001.jpg" />
+    <None Include="Contents\appgames\17000.jpg" />
+    <None Include="Contents\appgames\17001.jpg" />
+    <None Include="Contents\appgames\17003.jpg" />
+    <None Include="Contents\appgames\17004.jpg" />
+    <None Include="Contents\appgames\17005.jpg" />
+    <None Include="Contents\appgames\17006.jpg" />
+    <None Include="Contents\appgames\17008.jpg" />
+    <None Include="Contents\appgames\18000.jpg" />
+    <None Include="Contents\appgames\18002.jpg" />
+    <None Include="Contents\appgames\18004.jpg" />
+    <None Include="Contents\appgames\18005.jpg" />
+    <None Include="Contents\appgames\18010.jpg" />
+    <None Include="Contents\appgames\19000.jpg" />
+    <None Include="Contents\appgames\19001.jpg" />
+    <None Include="Contents\appgames\19004.jpg" />
+    <None Include="Contents\appgames\19006.jpg" />
+    <None Include="Contents\appgames\19007.jpg" />
+    <None Include="Contents\appgames\19008.jpg" />
+    <None Include="Contents\appgames\2000.jpg" />
+    <None Include="Contents\appgames\20000.jpg" />
+    <None Include="Contents\appgames\20001.jpg" />
+    <None Include="Contents\appgames\20002.jpg" />
+    <None Include="Contents\appgames\20004.jpg" />
+    <None Include="Contents\appgames\20005.jpg" />
+    <None Include="Contents\appgames\20006.jpg" />
+    <None Include="Contents\appgames\20007.jpg" />
+    <None Include="Contents\appgames\2003.jpg" />
+    <None Include="Contents\appgames\2004.jpg" />
+    <None Include="Contents\appgames\2005.jpg" />
+    <None Include="Contents\appgames\201000.jpg" />
+    <None Include="Contents\appgames\201001.jpg" />
+    <None Include="Contents\appgames\201002.jpg" />
+    <None Include="Contents\appgames\201003.jpg" />
+    <None Include="Contents\appgames\202000.jpg" />
+    <None Include="Contents\appgames\202001.jpg" />
+    <None Include="Contents\appgames\203000.jpg" />
+    <None Include="Contents\appgames\203001.jpg" />
+    <None Include="Contents\appgames\203002.jpg" />
+    <None Include="Contents\appgames\21000.jpg" />
+    <None Include="Contents\appgames\21002.jpg" />
+    <None Include="Contents\appgames\21004.jpg" />
+    <None Include="Contents\appgames\21006.jpg" />
+    <None Include="Contents\appgames\21007.jpg" />
+    <None Include="Contents\appgames\21008.jpg" />
+    <None Include="Contents\appgames\22000.jpg" />
+    <None Include="Contents\appgames\22003.jpg" />
+    <None Include="Contents\appgames\22006.jpg" />
+    <None Include="Contents\appgames\22007.jpg" />
+    <None Include="Contents\appgames\222000.jpg" />
+    <None Include="Contents\appgames\222001.jpg" />
+    <None Include="Contents\appgames\222002.jpg" />
+    <None Include="Contents\appgames\222003.jpg" />
+    <None Include="Contents\appgames\223000.jpg" />
+    <None Include="Contents\appgames\223001.jpg" />
+    <None Include="Contents\appgames\223002.jpg" />
+    <None Include="Contents\appgames\23000.jpg" />
+    <None Include="Contents\appgames\23001.jpg" />
+    <None Include="Contents\appgames\23002.jpg" />
+    <None Include="Contents\appgames\23004.jpg" />
+    <None Include="Contents\appgames\23005.jpg" />
+    <None Include="Contents\appgames\23006.jpg" />
+    <None Include="Contents\appgames\23007.jpg" />
+    <None Include="Contents\appgames\236000.jpg" />
+    <None Include="Contents\appgames\236001.jpg" />
+    <None Include="Contents\appgames\236002.jpg" />
+    <None Include="Contents\appgames\236006.jpg" />
+    <None Include="Contents\appgames\238000.jpg" />
+    <None Include="Contents\appgames\238001.jpg" />
+    <None Include="Contents\appgames\238002.jpg" />
+    <None Include="Contents\appgames\238003.jpg" />
+    <None Include="Contents\appgames\24000.jpg" />
+    <None Include="Contents\appgames\24004.jpg" />
+    <None Include="Contents\appgames\24005.jpg" />
+    <None Include="Contents\appgames\24006.jpg" />
+    <None Include="Contents\appgames\24007.jpg" />
+    <None Include="Contents\appgames\24008.jpg" />
+    <None Include="Contents\appgames\24012.jpg" />
+    <None Include="Contents\appgames\245000.jpg" />
+    <None Include="Contents\appgames\245001.jpg" />
+    <None Include="Contents\appgames\245002.jpg" />
+    <None Include="Contents\appgames\25000.jpg" />
+    <None Include="Contents\appgames\25001.jpg" />
+    <None Include="Contents\appgames\25003.jpg" />
+    <None Include="Contents\appgames\25004.jpg" />
+    <None Include="Contents\appgames\25005.jpg" />
+    <None Include="Contents\appgames\25010.jpg" />
+    <None Include="Contents\appgames\254000.jpg" />
+    <None Include="Contents\appgames\254001.jpg" />
+    <None Include="Contents\appgames\254002.jpg" />
+    <None Include="Contents\appgames\254003.jpg" />
+    <None Include="Contents\appgames\254004.jpg" />
+    <None Include="Contents\appgames\26000.jpg" />
+    <None Include="Contents\appgames\26002.jpg" />
+    <None Include="Contents\appgames\26003.jpg" />
+    <None Include="Contents\appgames\26005.jpg" />
+    <None Include="Contents\appgames\266000.jpg" />
+    <None Include="Contents\appgames\266002.jpg" />
+    <None Include="Contents\appgames\266003.jpg" />
+    <None Include="Contents\appgames\267000.jpg" />
+    <None Include="Contents\appgames\267001.jpg" />
+    <None Include="Contents\appgames\267002.jpg" />
+    <None Include="Contents\appgames\267003.jpg" />
+    <None Include="Contents\appgames\268000.jpg" />
+    <None Include="Contents\appgames\268001.jpg" />
+    <None Include="Contents\appgames\268002.jpg" />
+    <None Include="Contents\appgames\27000.jpg" />
+    <None Include="Contents\appgames\27001.jpg" />
+    <None Include="Contents\appgames\27002.jpg" />
+    <None Include="Contents\appgames\27005.jpg" />
+    <None Include="Contents\appgames\27007.jpg" />
+    <None Include="Contents\appgames\27008.jpg" />
+    <None Include="Contents\appgames\28000.jpg" />
+    <None Include="Contents\appgames\28001.jpg" />
+    <None Include="Contents\appgames\28003.jpg" />
+    <None Include="Contents\appgames\29000.jpg" />
+    <None Include="Contents\appgames\29002.jpg" />
+    <None Include="Contents\appgames\29003.jpg" />
+    <None Include="Contents\appgames\29005.jpg" />
+    <None Include="Contents\appgames\29007.jpg" />
+    <None Include="Contents\appgames\3000.jpg" />
+    <None Include="Contents\appgames\30000.jpg" />
+    <None Include="Contents\appgames\30003.jpg" />
+    <None Include="Contents\appgames\30004.jpg" />
+    <None Include="Contents\appgames\3001.jpg" />
+    <None Include="Contents\appgames\3002.jpg" />
+    <None Include="Contents\appgames\3005.jpg" />
+    <None Include="Contents\appgames\31000.jpg" />
+    <None Include="Contents\appgames\31002.jpg" />
+    <None Include="Contents\appgames\31003.jpg" />
+    <None Include="Contents\appgames\31005.jpg" />
+    <None Include="Contents\appgames\31006.jpg" />
+    <None Include="Contents\appgames\32000.jpg" />
+    <None Include="Contents\appgames\32001.jpg" />
+    <None Include="Contents\appgames\32002.jpg" />
+    <None Include="Contents\appgames\32003.jpg" />
+    <None Include="Contents\appgames\32004.jpg" />
+    <None Include="Contents\appgames\32007.jpg" />
+    <None Include="Contents\appgames\32008.jpg" />
+    <None Include="Contents\appgames\33000.jpg" />
+    <None Include="Contents\appgames\33002.jpg" />
+    <None Include="Contents\appgames\33003.jpg" />
+    <None Include="Contents\appgames\33007.jpg" />
+    <None Include="Contents\appgames\34000.jpg" />
+    <None Include="Contents\appgames\34001.jpg" />
+    <None Include="Contents\appgames\34003.jpg" />
+    <None Include="Contents\appgames\34004.jpg" />
+    <None Include="Contents\appgames\34006.jpg" />
+    <None Include="Contents\appgames\35000.jpg" />
+    <None Include="Contents\appgames\35001.jpg" />
+    <None Include="Contents\appgames\35002.jpg" />
+    <None Include="Contents\appgames\35003.jpg" />
+    <None Include="Contents\appgames\35005.jpg" />
+    <None Include="Contents\appgames\35006.jpg" />
+    <None Include="Contents\appgames\35007.jpg" />
+    <None Include="Contents\appgames\36000.jpg" />
+    <None Include="Contents\appgames\36001.jpg" />
+    <None Include="Contents\appgames\36002.jpg" />
+    <None Include="Contents\appgames\36003.jpg" />
+    <None Include="Contents\appgames\36004.jpg" />
+    <None Include="Contents\appgames\36006.jpg" />
+    <None Include="Contents\appgames\36007.jpg" />
+    <None Include="Contents\appgames\36008.jpg" />
+    <None Include="Contents\appgames\37000.jpg" />
+    <None Include="Contents\appgames\37003.jpg" />
+    <None Include="Contents\appgames\37004.jpg" />
+    <None Include="Contents\appgames\37005.jpg" />
+    <None Include="Contents\appgames\37006.jpg" />
+    <None Include="Contents\appgames\37007.jpg" />
+    <None Include="Contents\appgames\38000.jpg" />
+    <None Include="Contents\appgames\38002.jpg" />
+    <None Include="Contents\appgames\38003.jpg" />
+    <None Include="Contents\appgames\38004.jpg" />
+    <None Include="Contents\appgames\38005.jpg" />
+    <None Include="Contents\appgames\39000.jpg" />
+    <None Include="Contents\appgames\39001.jpg" />
+    <None Include="Contents\appgames\39002.jpg" />
+    <None Include="Contents\appgames\39004.jpg" />
+    <None Include="Contents\appgames\39005.jpg" />
+    <None Include="Contents\appgames\4000.jpg" />
+    <None Include="Contents\appgames\40000.jpg" />
+    <None Include="Contents\appgames\40001.jpg" />
+    <None Include="Contents\appgames\40003.jpg" />
+    <None Include="Contents\appgames\40005.jpg" />
+    <None Include="Contents\appgames\4001.jpg" />
+    <None Include="Contents\appgames\4002.jpg" />
+    <None Include="Contents\appgames\4003.jpg" />
+    <None Include="Contents\appgames\4004.jpg" />
+    <None Include="Contents\appgames\4008.jpg" />
+    <None Include="Contents\appgames\4009.jpg" />
+    <None Include="Contents\appgames\41000.jpg" />
+    <None Include="Contents\appgames\41001.jpg" />
+    <None Include="Contents\appgames\41002.jpg" />
+    <None Include="Contents\appgames\41004.jpg" />
+    <None Include="Contents\appgames\41005.jpg" />
+    <None Include="Contents\appgames\412000.jpg" />
+    <None Include="Contents\appgames\412002.jpg" />
+    <None Include="Contents\appgames\412003.jpg" />
+    <None Include="Contents\appgames\412004.jpg" />
+    <None Include="Contents\appgames\42000.jpg" />
+    <None Include="Contents\appgames\420000.jpg" />
+    <None Include="Contents\appgames\420001.jpg" />
+    <None Include="Contents\appgames\42001.jpg" />
+    <None Include="Contents\appgames\42003.jpg" />
+    <None Include="Contents\appgames\42004.jpg" />
+    <None Include="Contents\appgames\42005.jpg" />
+    <None Include="Contents\appgames\42006.jpg" />
+    <None Include="Contents\appgames\42008.jpg" />
+    <None Include="Contents\appgames\421000.jpg" />
+    <None Include="Contents\appgames\421001.jpg" />
+    <None Include="Contents\appgames\421002.jpg" />
+    <None Include="Contents\appgames\429000.jpg" />
+    <None Include="Contents\appgames\429001.jpg" />
+    <None Include="Contents\appgames\429002.jpg" />
+    <None Include="Contents\appgames\43000.jpg" />
+    <None Include="Contents\appgames\43001.jpg" />
+    <None Include="Contents\appgames\43002.jpg" />
+    <None Include="Contents\appgames\43005.jpg" />
+    <None Include="Contents\appgames\432000.jpg" />
+    <None Include="Contents\appgames\432001.jpg" />
+    <None Include="Contents\appgames\432005.jpg" />
+    <None Include="Contents\appgames\44000.jpg" />
+    <None Include="Contents\appgames\44003.jpg" />
+    <None Include="Contents\appgames\45000.jpg" />
+    <None Include="Contents\appgames\45003.jpg" />
+    <None Include="Contents\appgames\45006.jpg" />
+    <None Include="Contents\appgames\45007.jpg" />
+    <None Include="Contents\appgames\45008.jpg" />
+    <None Include="Contents\appgames\48000.jpg" />
+    <None Include="Contents\appgames\48002.jpg" />
+    <None Include="Contents\appgames\5000.jpg" />
+    <None Include="Contents\appgames\50000.jpg" />
+    <None Include="Contents\appgames\50001.jpg" />
+    <None Include="Contents\appgames\5002.jpg" />
+    <None Include="Contents\appgames\5003.jpg" />
+    <None Include="Contents\appgames\5004.jpg" />
+    <None Include="Contents\appgames\5005.jpg" />
+    <None Include="Contents\appgames\5006.jpg" />
+    <None Include="Contents\appgames\51000.jpg" />
+    <None Include="Contents\appgames\51001.jpg" />
+    <None Include="Contents\appgames\51002.jpg" />
+    <None Include="Contents\appgames\51005.jpg" />
+    <None Include="Contents\appgames\51006.jpg" />
+    <None Include="Contents\appgames\51010.jpg" />
+    <None Include="Contents\appgames\53000.jpg" />
+    <None Include="Contents\appgames\53001.jpg" />
+    <None Include="Contents\appgames\53005.jpg" />
+    <None Include="Contents\appgames\53006.jpg" />
+    <None Include="Contents\appgames\53007.jpg" />
+    <None Include="Contents\appgames\53011.jpg" />
+    <None Include="Contents\appgames\54000.jpg" />
+    <None Include="Contents\appgames\54002.jpg" />
+    <None Include="Contents\appgames\54004.jpg" />
+    <None Include="Contents\appgames\54005.jpg" />
+    <None Include="Contents\appgames\54006.jpg" />
+    <None Include="Contents\appgames\54007.jpg" />
+    <None Include="Contents\appgames\55000.jpg" />
+    <None Include="Contents\appgames\55001.jpg" />
+    <None Include="Contents\appgames\55004.jpg" />
+    <None Include="Contents\appgames\55007.jpg" />
+    <None Include="Contents\appgames\55008.jpg" />
+    <None Include="Contents\appgames\56000.jpg" />
+    <None Include="Contents\appgames\56001.jpg" />
+    <None Include="Contents\appgames\56003.jpg" />
+    <None Include="Contents\appgames\56004.jpg" />
+    <None Include="Contents\appgames\56005.jpg" />
+    <None Include="Contents\appgames\56006.jpg" />
+    <None Include="Contents\appgames\57000.jpg" />
+    <None Include="Contents\appgames\57001.jpg" />
+    <None Include="Contents\appgames\57003.jpg" />
+    <None Include="Contents\appgames\57004.jpg" />
+    <None Include="Contents\appgames\57005.jpg" />
+    <None Include="Contents\appgames\57006.jpg" />
+    <None Include="Contents\appgames\58000.jpg" />
+    <None Include="Contents\appgames\58002.jpg" />
+    <None Include="Contents\appgames\58003.jpg" />
+    <None Include="Contents\appgames\58005.jpg" />
+    <None Include="Contents\appgames\58006.jpg" />
+    <None Include="Contents\appgames\58007.jpg" />
+    <None Include="Contents\appgames\59000.jpg" />
+    <None Include="Contents\appgames\59002.jpg" />
+    <None Include="Contents\appgames\59003.jpg" />
+    <None Include="Contents\appgames\59004.jpg" />
+    <None Include="Contents\appgames\59005.jpg" />
+    <None Include="Contents\appgames\6000.jpg" />
+    <None Include="Contents\appgames\60000.jpg" />
+    <None Include="Contents\appgames\60003.jpg" />
+    <None Include="Contents\appgames\6002.jpg" />
+    <None Include="Contents\appgames\61000.jpg" />
+    <None Include="Contents\appgames\61001.jpg" />
+    <None Include="Contents\appgames\61003.jpg" />
+    <None Include="Contents\appgames\61004.jpg" />
+    <None Include="Contents\appgames\61005.jpg" />
+    <None Include="Contents\appgames\61006.jpg" />
+    <None Include="Contents\appgames\62000.jpg" />
+    <None Include="Contents\appgames\62001.jpg" />
+    <None Include="Contents\appgames\62003.jpg" />
+    <None Include="Contents\appgames\62004.jpg" />
+    <None Include="Contents\appgames\62005.jpg" />
+    <None Include="Contents\appgames\63000.jpg" />
+    <None Include="Contents\appgames\63001.jpg" />
+    <None Include="Contents\appgames\63002.jpg" />
+    <None Include="Contents\appgames\63004.jpg" />
+    <None Include="Contents\appgames\63005.jpg" />
+    <None Include="Contents\appgames\64000.jpg" />
+    <None Include="Contents\appgames\64001.jpg" />
+    <None Include="Contents\appgames\64003.jpg" />
+    <None Include="Contents\appgames\64004.jpg" />
+    <None Include="Contents\appgames\64005.jpg" />
+    <None Include="Contents\appgames\64006.jpg" />
+    <None Include="Contents\appgames\64007.jpg" />
+    <None Include="Contents\appgames\64010.jpg" />
+    <None Include="Contents\appgames\67000.jpg" />
+    <None Include="Contents\appgames\67002.jpg" />
+    <None Include="Contents\appgames\67003.jpg" />
+    <None Include="Contents\appgames\67004.jpg" />
+    <None Include="Contents\appgames\67005.jpg" />
+    <None Include="Contents\appgames\67006.jpg" />
+    <None Include="Contents\appgames\67010.jpg" />
+    <None Include="Contents\appgames\68000.jpg" />
+    <None Include="Contents\appgames\68001.jpg" />
+    <None Include="Contents\appgames\68002.jpg" />
+    <None Include="Contents\appgames\68003.jpg" />
+    <None Include="Contents\appgames\69000.jpg" />
+    <None Include="Contents\appgames\69001.jpg" />
+    <None Include="Contents\appgames\69002.jpg" />
+    <None Include="Contents\appgames\69004.jpg" />
+    <None Include="Contents\appgames\7000.jpg" />
+    <None Include="Contents\appgames\7001.jpg" />
+    <None Include="Contents\appgames\7002.jpg" />
+    <None Include="Contents\appgames\7003.jpg" />
+    <None Include="Contents\appgames\7004.jpg" />
+    <None Include="Contents\appgames\72000.jpg" />
+    <None Include="Contents\appgames\72001.jpg" />
+    <None Include="Contents\appgames\72003.jpg" />
+    <None Include="Contents\appgames\72004.jpg" />
+    <None Include="Contents\appgames\74000.jpg" />
+    <None Include="Contents\appgames\74001.jpg" />
+    <None Include="Contents\appgames\74002.jpg" />
+    <None Include="Contents\appgames\74003.jpg" />
+    <None Include="Contents\appgames\74004.jpg" />
+    <None Include="Contents\appgames\74005.jpg" />
+    <None Include="Contents\appgames\75000.jpg" />
+    <None Include="Contents\appgames\75001.jpg" />
+    <None Include="Contents\appgames\75002.jpg" />
+    <None Include="Contents\appgames\75004.jpg" />
+    <None Include="Contents\appgames\75005.jpg" />
+    <None Include="Contents\appgames\75006.jpg" />
+    <None Include="Contents\appgames\76000.jpg" />
+    <None Include="Contents\appgames\76001.jpg" />
+    <None Include="Contents\appgames\76003.jpg" />
+    <None Include="Contents\appgames\76005.jpg" />
+    <None Include="Contents\appgames\76006.jpg" />
+    <None Include="Contents\appgames\76007.jpg" />
+    <None Include="Contents\appgames\76008.jpg" />
+    <None Include="Contents\appgames\77000.jpg" />
+    <None Include="Contents\appgames\77001.jpg" />
+    <None Include="Contents\appgames\77002.jpg" />
+    <None Include="Contents\appgames\77003.jpg" />
+    <None Include="Contents\appgames\77004.jpg" />
+    <None Include="Contents\appgames\78000.jpg" />
+    <None Include="Contents\appgames\78001.jpg" />
+    <None Include="Contents\appgames\78002.jpg" />
+    <None Include="Contents\appgames\78004.jpg" />
+    <None Include="Contents\appgames\79000.jpg" />
+    <None Include="Contents\appgames\79002.jpg" />
+    <None Include="Contents\appgames\79003.jpg" />
+    <None Include="Contents\appgames\79004.jpg" />
+    <None Include="Contents\appgames\79005.jpg" />
+    <None Include="Contents\appgames\79006.jpg" />
+    <None Include="Contents\appgames\79007.jpg" />
+    <None Include="Contents\appgames\79009.jpg" />
+    <None Include="Contents\appgames\8000.jpg" />
+    <None Include="Contents\appgames\80000.jpg" />
+    <None Include="Contents\appgames\80001.jpg" />
+    <None Include="Contents\appgames\80002.jpg" />
+    <None Include="Contents\appgames\80003.jpg" />
+    <None Include="Contents\appgames\80004.jpg" />
+    <None Include="Contents\appgames\80005.jpg" />
+    <None Include="Contents\appgames\80006.jpg" />
+    <None Include="Contents\appgames\80007.jpg" />
+    <None Include="Contents\appgames\8003.jpg" />
+    <None Include="Contents\appgames\8005.jpg" />
+    <None Include="Contents\appgames\8006.jpg" />
+    <None Include="Contents\appgames\8007.jpg" />
+    <None Include="Contents\appgames\81000.jpg" />
+    <None Include="Contents\appgames\81002.jpg" />
+    <None Include="Contents\appgames\81003.jpg" />
+    <None Include="Contents\appgames\81005.jpg" />
+    <None Include="Contents\appgames\81006.jpg" />
+    <None Include="Contents\appgames\81007.jpg" />
+    <None Include="Contents\appgames\81008.jpg" />
+    <None Include="Contents\appgames\81009.jpg" />
+    <None Include="Contents\appgames\82000.jpg" />
+    <None Include="Contents\appgames\82001.jpg" />
+    <None Include="Contents\appgames\82002.jpg" />
+    <None Include="Contents\appgames\82003.jpg" />
+    <None Include="Contents\appgames\82004.jpg" />
+    <None Include="Contents\appgames\82005.jpg" />
+    <None Include="Contents\appgames\83000.jpg" />
+    <None Include="Contents\appgames\84000.jpg" />
+    <None Include="Contents\appgames\84001.jpg" />
+    <None Include="Contents\appgames\84002.jpg" />
+    <None Include="Contents\appgames\84003.jpg" />
+    <None Include="Contents\appgames\84004.jpg" />
+    <None Include="Contents\appgames\84005.jpg" />
+    <None Include="Contents\appgames\84006.jpg" />
+    <None Include="Contents\appgames\84007.jpg" />
+    <None Include="Contents\appgames\85000.jpg" />
+    <None Include="Contents\appgames\85002.jpg" />
+    <None Include="Contents\appgames\85003.jpg" />
+    <None Include="Contents\appgames\85004.jpg" />
+    <None Include="Contents\appgames\85005.jpg" />
+    <None Include="Contents\appgames\85006.jpg" />
+    <None Include="Contents\appgames\86000.jpg" />
+    <None Include="Contents\appgames\86001.jpg" />
+    <None Include="Contents\appgames\86004.jpg" />
+    <None Include="Contents\appgames\86006.jpg" />
+    <None Include="Contents\appgames\86010.jpg" />
+    <None Include="Contents\appgames\89000.jpg" />
+    <None Include="Contents\appgames\89001.jpg" />
+    <None Include="Contents\appgames\89003.jpg" />
+    <None Include="Contents\appgames\89004.jpg" />
+    <None Include="Contents\appgames\89008.jpg" />
+    <None Include="Contents\appgames\9000.jpg" />
+    <None Include="Contents\appgames\90000.jpg" />
+    <None Include="Contents\appgames\90004.jpg" />
+    <None Include="Contents\appgames\90005.jpg" />
+    <None Include="Contents\appgames\9002.jpg" />
+    <None Include="Contents\appgames\9004.jpg" />
+    <None Include="Contents\appgames\9005.jpg" />
+    <None Include="Contents\appgames\9006.jpg" />
+    <None Include="Contents\appgames\9007.jpg" />
+    <None Include="Contents\appgames\9008.jpg" />
+    <None Include="Contents\appgames\91000.jpg" />
+    <None Include="Contents\appgames\91001.jpg" />
+    <None Include="Contents\appgames\91002.jpg" />
+    <None Include="Contents\appgames\91003.jpg" />
+    <None Include="Contents\appgames\91004.jpg" />
+    <None Include="Contents\appgames\92000.jpg" />
+    <None Include="Contents\appgames\92001.jpg" />
+    <None Include="Contents\appgames\92002.jpg" />
+    <None Include="Contents\appgames\92003.jpg" />
+    <None Include="Contents\appgames\92004.jpg" />
+    <None Include="Contents\appgames\92005.jpg" />
+    <None Include="Contents\appgames\92006.jpg" />
+    <None Include="Contents\appgames\96000.jpg" />
+    <None Include="Contents\appgames\96001.jpg" />
+    <None Include="Contents\appgames\96004.jpg" />
+    <None Include="Contents\appgames\96005.jpg" />
+    <None Include="Contents\appgames\96008.jpg" />
+    <None Include="Contents\appgames\98000.jpg" />
+    <None Include="Contents\appgames\98001.jpg" />
+    <None Include="Contents\appgames\98002.jpg" />
+    <None Include="Contents\appgames\98003.jpg" />
+    <None Include="Contents\appgames\98004.jpg" />
+    <None Include="Contents\appgames\98006.jpg" />
+    <None Include="Contents\appgames\99000.jpg" />
+    <None Include="Contents\appgames\99001.jpg" />
+    <None Include="Contents\appgames\99005.jpg" />
+    <None Include="Contents\appgames\99006.jpg" />
+    <None Include="Contents\appgames\games\ISLIGHT.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\games\RALFSHEN_HEROSKIN.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\Config\application.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\Config\pathicon.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\Themes\big\a景观\默认.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\Themes\thumb\a景观\默认.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\Ay.Framework.WPF.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\Interop.SHDocVw.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\Microsoft.Expression.Controls.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\Microsoft.Expression.Drawing.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\Microsoft.Expression.Interactions.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\System.Windows.Interactivity.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\文件说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\ShaderEffectLibrary.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Contents\Images\Body_Bd\spr_9.png" />
+    <Resource Include="Contents\Images\Body_Bd\Header.png" />
+    <Resource Include="Contents\Images\Body_Bd\spr_6.png" />
+    <Resource Include="Contents\Images\Body_Bd\spr_7.png" />
+    <Resource Include="Contents\Images\Body_Bd\spr_8.png" />
+    <None Include="Contents\Config\GameConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Contents\Images\Body_Bd\nav1_1.png" />
+    <Resource Include="Contents\Images\Body_Bd\nav1_2.png" />
+    <Resource Include="Contents\Images\Body_Bd\nav2_1.png" />
+    <Resource Include="Contents\Images\Body_Bd\nav2_2.png" />
+    <Resource Include="Contents\Images\Body_Bd\nav3_1.png" />
+    <Resource Include="Contents\Images\Body_Bd\nav3_2.png" />
+    <Resource Include="Contents\Images\Body_Bd\nav4_1.png" />
+    <Resource Include="Contents\Images\Body_Bd\nav4_2.png" />
+    <None Include="Contents\Images\Body_Bd\bg-step1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\Body_Bd\bg-step2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\Body_Bd\bg-step3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\Body_Bd\bg-step4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\Body_Bd\bg-step5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\Body_Bd\bg-step6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\Body_Bd\bg-header.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Contents\Images\Body_Bd\spr_10.png" />
+    <Resource Include="Contents\Images\Body_Bd\spr_11.png" />
+    <Resource Include="Contents\Images\Body_Bd\img_show1.jpg" />
+    <Resource Include="Contents\Images\Body_Bd\img_show2.jpg" />
+    <Resource Include="Contents\Images\Body_Bd\bg-side-nav.png" />
+    <Resource Include="Contents\Images\Body_Bd\none.jpg" />
+    <Resource Include="Contents\Images\Body_Bd\none_bg.png" />
+    <Resource Include="Contents\Images\Body_Bd\tit_spr.png" />
+    <Resource Include="Contents\Images\Body_Bd\spr_12.png" />
+    <Resource Include="Contents\Images\Body_Bd\spr_14.png" />
+    <None Include="Contents\Images\Sow\gift_ico_pf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\Sow\gift_ico_yx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Contents\Images\Sow\gold_cover_146x168.gif" />
+    <Resource Include="Contents\Images\Sow\spr_12.png" />
+    <Resource Include="Contents\Images\Sow\spr_13.png" />
+    <Resource Include="Contents\Images\Sow\spr_14.png" />
+    <Resource Include="Contents\Images\Sow\spr_15.png" />
+    <None Include="lib\Ay.Framework.Common.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\appgames\10001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\10003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\10004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\10007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\1010.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\101001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\101003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\102002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\102004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\103001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\103002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\103007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\104001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\104007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\105001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\106003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\106004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\106005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\107001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\110006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\11004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\111002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\111003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\111005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\112002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\113003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\113004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\113006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\113007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\114002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\114005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\117002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\117004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\117006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\119001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\119005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\120006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\12002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\12003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\12006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\126001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\126004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\13001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\13004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\13006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\13010.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\14001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\14002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\150004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\15002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\15004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\15006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\15008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\164000.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\164001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\17002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\17007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\17014.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\18001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\18003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\18006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\18011.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\19002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\19003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\19005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\20003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\2001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\2002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\2006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\201010.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\21001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\21003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\21005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\21009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\22001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\22002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\22004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\22005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\22008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\222004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\23003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\23008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\238010.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\240000.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\240001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\24001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\24002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\24003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\245003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\25002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\25006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\25011.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\26001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\26004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\266001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\267007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\268003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\27003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\27004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\27006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\28002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\28004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\29001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\29004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\29006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\30001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\30002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\30005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\30009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\3003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\3004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\31001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\31004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\32005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\32006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\33001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\33004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\33005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\33006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\34002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\34005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\35004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\36005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\36009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\37001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\37002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\38001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\39003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\40002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\40004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\40006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\40007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\4005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\4006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\4007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\41003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\41006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\41007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\412001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\412005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\42002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\42007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\427000.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\427001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\429003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\43003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\43004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\43006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\432006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\44001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\44002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\44004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\45001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\45002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\45004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\45005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\48001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\48003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\48004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\48005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\50002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\50003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\5001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\51003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\51004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\53002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\53003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\53004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\54001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\54003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\55002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\55003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\55005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\55006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\55009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\56002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\57002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\57007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\58001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\58004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\58008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\59001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\59006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\60001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\60002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\60004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\6001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\6003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\61002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\62002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\63003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\64002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\67001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\69003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\7005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\72002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\75003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\75010.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\76002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\76004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\78003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\78005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\78006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\78007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\79001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\79008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\80008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\8001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\8002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\8004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\81001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\81004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\83001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\83002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\84008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\85001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\86002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\86003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\86005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\89002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\89009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\90001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\90002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\90003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\9001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\9003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\92007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\96002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\96003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\96006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\96007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\98005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\99002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\99003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\99004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\appgames\99007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contents\Images\Sow\gold_cover_146x195.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contents\Images\Sow\gold_cover_166x221.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contents\Images\Sow\gold_cover_107x142.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contents\Images\Sow\ele_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image 10_1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

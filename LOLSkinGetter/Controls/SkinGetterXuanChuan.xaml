@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="LOLSkinGetter.SkinGetterXuanChuan"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:LOLSkinGetter"
+             mc:Ignorable="d"
+             d:DesignHeight="225"
+             d:DesignWidth="1871">
+ 
+    <StackPanel>
+        <Canvas Width="{Binding ViewBoxWidth,RelativeSource={RelativeSource AncestorType={x:Type UserControl},Mode=FindAncestor}}"
+                HorizontalAlignment="Center"
+                Height="{Binding ViewBoxHeight,RelativeSource={RelativeSource AncestorType={x:Type UserControl},Mode=FindAncestor}}"
+                ClipToBounds="True">
+            <Image x:Name="prev" Canvas.Left="0"
+                   Source="{Binding Source,RelativeSource={RelativeSource AncestorType={x:Type UserControl},Mode=FindAncestor}}"
+                   VerticalAlignment="Bottom" />
+            
+
+        </Canvas>
+        <StackPanel x:Name="sp_navs" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,17,0,0">
+            <!--<RadioButton Style="{StaticResource rdoNavSkin}" IsChecked="True"></RadioButton>
+            <RadioButton Style="{StaticResource rdoNavSkin}"
+                         IsChecked="False"
+                         Margin="12,0,0,0"></RadioButton>
+            <RadioButton          IsChecked="False"
+                                  Style="{StaticResource rdoNavSkin}"
+                         Margin="12,0,0,0"></RadioButton>
+            <RadioButton          IsChecked="False"
+                                  Style="{StaticResource rdoNavSkin}"
+                         Margin="12,0,0,0"></RadioButton>
+            <RadioButton          IsChecked="False"
+                                  Style="{StaticResource rdoNavSkin}"
+                         Margin="12,0,0,0"></RadioButton>-->
+        </StackPanel>
+    </StackPanel>
+</UserControl>

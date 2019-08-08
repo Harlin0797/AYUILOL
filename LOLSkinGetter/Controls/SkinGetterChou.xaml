@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="LOLSkinGetter.SkinGetterChou"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:LOLSkinGetter"
+             xmlns:control="http://www.ayjs.net/controls"
+             mc:Ignorable="d"
+             xmlns:cc="clr-namespace:LOLSkinGetter"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    <Grid>
+        <Grid ClipToBounds="True" Width="{Binding MWidth,RelativeSource={RelativeSource AncestorType={x:Type UserControl},Mode=FindAncestor}}"
+              Height="{Binding MHeight,RelativeSource={RelativeSource AncestorType={x:Type UserControl},Mode=FindAncestor}}"
+              GridService.Columns="682 * 62"
+              GridService.Rows="60 446 *">
+            <TextBlock Text="{Binding TitleBar,StringFormat=您的运气不错，赠送10个{0}后发现：,RelativeSource={RelativeSource AncestorType={x:Type UserControl},Mode=FindAncestor}}"
+                       FontWeight="Bold"
+                       FontSize="30"
+                       Foreground="#FFF"
+                       HorizontalAlignment="Left"></TextBlock>
+            <cc:SkinGetterViewBox3 Grid.Column="1"
+                                   Grid.Row="1"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   Canvas.Left="-192"
+                                   x:Name="ugEx"></cc:SkinGetterViewBox3>
+            <Border BorderBrush="#e5026a"
+                    Padding="15 10"
+                    BorderThickness="8"
+                    CornerRadius="4"
+                    Background="#67002d"
+                    Grid.Row="1">
+                <Grid  x:Name="ug" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" GridService.Rows="? ?" GridService.Columns="? ? ? ? ?">
+                 
+                </Grid>
+                <!--<UniformGrid Rows="2"
+                             x:Name="ug"
+                             Columns="5">
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="大夏武士 潘森"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/80005.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="苍穹之光 韦鲁斯"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/110002.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="地底迷城 诺提勒斯"
+                                           CardExpire="7天体验"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/111002.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="雪球也能爆炸！ 吉格斯"
+                                           CardExpire="7天体验"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/115004.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 x:Name="sgv_1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="霸天异形 卡兹克"
+                                           CardExpire="7天体验"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/121001.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="时光守护者 基兰"
+                                           CardType="1"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/26000.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="糖果之王 艾翁"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/427001.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="丧尸杀手 金克丝"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/222003.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="无头骑士 赫卡里姆"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/120003.jpg"></cc:SkinGetterViewBox2>
+                    <cc:SkinGetterViewBox2 VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           CardTitle="冰雪节 格雷福斯"
+                                           CardExpire="7天体验"
+                                           CardType="2"
+                                           CurrentImage="pack://siteoforigin:,,,/Contents/appgames/104007.jpg"></cc:SkinGetterViewBox2>
+                </UniformGrid>-->
+            </Border>
+            <!--<Canvas  Grid.Column="1" ClipToBounds="True"
+                     Grid.Row="1" x:Name="ugcanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">-->
+            
+            <!--</Canvas>-->
+        
+            <TextBlock FontFamily="simsun"
+                       Grid.Row="1"
+                       MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
+                       TouchDown="TextBlock_TouchDown"
+                       Grid.Column="2"
+                       Cursor="Hand"
+                       HorizontalAlignment="Left"
+                       Margin="-27,32,0,0"
+                       VerticalAlignment="Top"
+                       FontSize="62"
+                       Foreground="#FFF"
+                       Background="Transparent">×</TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,18,0,0" Grid.Row="2" Grid.Column="0">
+                <control:AyImageButton Width="146"
+                                       Height="52" VerticalAlignment="Center"
+                                       Margin="68,0,20,0"
+                                       RenderMode="AllOpacity" Click="AyImageButton_Click"
+                                       Icon="/LOLSkinGetter;component/Contents/Images/Body_Bd/spr_6.png">
+                    <TextBlock    FontWeight="Bold"
+                                  FontSize="16"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center" 
+                                  Foreground="#FFFFFF">确定</TextBlock>
+
+                </control:AyImageButton>
+                
+                <control:AyImageButton Width="146"
+                                       Height="52"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,0,0"
+                                       RenderMode="AllOpacity"
+                                       Icon="/LOLSkinGetter;component/Contents/Images/Body_Bd/spr_7.png">
+                    <TextBlock    FontWeight="Bold"
+                                  FontSize="16"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Foreground="#FFFFFF">立即分享</TextBlock>
+
+                </control:AyImageButton>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
